@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: argocd-hw-ingress
+  namespace: default
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: eso-integration-demo-helm-ns.aro-vpaas-dev.euw-hub02.azure.volvo.net
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: argocd-hw-service
+                port:
+                  number: 5000
+  # Uncomment the following section if you have a TLS certificate
+  tls:
+  - {}
+  #   - hosts:
+  #       - argocd-hw.example.com
+  #     secretName: argocd-hw-tls-secret

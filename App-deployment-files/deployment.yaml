@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argocd-hw-app
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: argocd-hw-app
+  template:
+    metadata:
+      labels:
+        app: argocd-hw-app
+    spec:
+      containers:
+      - name: argocd-hw-app
+        image: sujayabu/myhelloworldimage:v1
+        ports:
+        - containerPort: 5000
