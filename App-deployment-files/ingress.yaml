@@ -7,7 +7,7 @@ metadata:
     haproxy.router.openshift.io/timeout: 5m
 spec:
   rules:
-    - host: helloworld.apps.aro-vpaas-dev.euw-hub02.azure.volvo.net
+    - host: argocdhelloworld.aro-vpaas-dev.euw-hub02.azure.volvo.net
       http:
         paths:
           - path: /
