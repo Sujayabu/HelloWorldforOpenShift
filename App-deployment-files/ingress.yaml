@@ -16,6 +16,7 @@ spec:
               service:
                 name: argocd-hw-service
                 port:
+                  name: http
                   number: 5000
   # Uncomment the following section if you have a TLS certificate
   tls:
