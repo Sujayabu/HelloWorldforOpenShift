@@ -19,5 +19,7 @@ spec:
                   number: 5000
   # Uncomment the following section if you have a TLS certificate
   tls:
-  - {}
+    - hosts:
+        - argocdhelloworld.apps.aro-vpaas-dev.euw-hub02.azure.volvo.net
+      secretName: tls-cert  
 
