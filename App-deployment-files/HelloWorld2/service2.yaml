@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: argocd-hw-service
+  name: argocd-hw-service2
 spec:
   selector: 
-    app: argocd-hw-app
+    app: argocd-hw-app2
   ports:
     - protocol: TCP
       port: 5000

@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: argocd-hw-ingress1
+spec:
+  rules:
+    - host: argocdhelloworld1.apps.aro-vpaas-dev.euw-hub02.azure.volvo.net
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: argocd-hw-service1
+                port:
+                  number: 5000
+  # Uncomment the following section if you have a TLS certificate
+  tls:
+  - {}
+
+
